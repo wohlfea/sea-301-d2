@@ -1,10 +1,10 @@
 # Code 301: Intermediate Software Development
 
-Welcome to sea-301d1!
+Welcome to Code 301! This is a class that builds on your fundamental knowledge of HTML, CSS, JavaScript, git, and general web development, to prepare you for the deep dive of any Code 401 class.
 
 # Introduction
 
-We are going to learn about many different topics of web development. The overall structure is based on Model-View-Controller (MVC), which is a common design pattern for web applications.
+We are going to learn about many different topics of web development. The overall structure of the course is based on Model-View-Controller (MVC), which is a common design pattern for web applications.
 
 The general course schedule is:
 
@@ -15,47 +15,97 @@ Week 2     | Week 3 and 4 | The Model
 Week 3     | Week 5 and 6 | The Controller
 Week 4     | Week 7 and 8 | Your Project
 
-Check out the full [Table of Contents](SUMMARY.md).
+## Slides from class
+
+Slides will be placed in each class' lecture-code subdirectory after they are presented.
+
+Slides will be in PDF format with presenter notes for re-viewing.
 
 ## Assignments
 
-Each class will have assignments for lab and homework. You can find these in the assignemnts subdirectory in each chapter.
+Lab-time code assignments follow each class time. You can find these assignments in the subdirectories of each class folder. Generally, you'll have a "pair" assignment that you'll work on with a classmate, and an individual "sandbox" assignment in which you'll build up your own online portfolio. Useful for your coming career change!
 
-For students, make a subfodler within the assigments folder and submit your homework with a Pull Request and within Canvas.
+Instructions for completing and submitting the assignments can be found in the README files of the appropriate subdirectories.
 
+Assignments are submitted using a professional-grade git-flow. If you haven't done so already, it's time to get comfortable with the core git commands. Don't worry, we'll give you step by step help as needed.
 
-## Slideshows
+# Required Computer Setup
 
-Slides should be placed in each chapter's subdirectory.
+## Install Atom
 
-Slides will be in Keynote and are also exported to PDF and HTML for cross-platform viewing.
+If you haven't already, install [Atom](https://atom.io). If you have used an advanced text editor like Sublime Text, then Atom will feel familiar to you. Atom is free, open-source, cross-platform, and has a wide array of useful plug-ins available. Please use Atom during Code 301. (And yes...if you are proficient with another text editor that you *love*, you may use that instead)
 
-To run the slideshows, use live-server or something similar, e.g.:
+[Atom's documentation](https://atom.io/docs/latest) is top-notch. Review it now to familiarize yourself with the basics. Make sure you're looking at the docs for the latest version.
 
-```
-npm -g install live-server
-live-server chapter1-persistence
-```
+## Install Node
 
+*Note* If you get an error while installing these packages such as "try again as root/administrator", you may need to use the `sudo` command to get administrator access. For example `sudo apt-get install nodejs`.
 
-# Lint your code
-Linting is the process of running a program that will analyse code for potential errors. It is an important part of the quality assurance process.
+#### Linux instructions
+
+  To install Node, open your Terminal, and enter:
+
+  `apt-get install nodejs`
+
+#### Mac instructions
+
+  If you took Code 201, you should already have Homebrew installed. If you have not, follow the guide on [this page](https://github.com/codefellows/code-201-prework/blob/master/prework/mac/2_homebrew.md#install-homebrew).
+
+  To install Node, open your Terminal, and enter:
+
+  `brew install node`
+
+#### Windows instructions
+
+  To install Node, go [here](https://nodejs.org/en/download/), and then download and run the Windows Installer. Make sure you do not deselect any of the Node components such as NPM during the installation.
+
+### Verify the Node installation
+Now let's verify that it is installed. Enter the following into your terminal:
+
+`node -e 'console.log("works")'`
+
+You should get a response that says "works". If not, try reinstalling Node again
+
+## Install eslint and live-server Node packages
+
+Now that you have Node installed, you can install Node packages using its package manager, **NPM**. Open your Terminal (Git Bash on Windows) and enter:
+
+`npm -g i eslint live-server`
+
+You should see a lot of feedback as it installs.
+
+### Verify the Node packages installation
+Now let's verify that it is installed. Enter the following into your terminal:
+
+`npm list -g --depth=0`
+
+You should get a list back that includes `live-server` and `eslint`.
+
+![](http://i.imgur.com/1ITioP1.png)
+
+### What is this linter thing?
+
+Linting is the process of running a program that will analyze code for potential errors. It is an important part of the quality assurance process.
 
 > `lint` was the name originally given to a particular program that flagged some suspicious and non-portable constructs (likely to be bugs) in C language source code. The term is now applied generically to tools that flag suspicious usage in software written in any computer language.
 
-Make sure you have [ESLint](http://eslint.org) installed. 
+That means the linter is your friend! It will help you write syntactically correct code, so you can catch errors in your text editor, rather than having to hop over the browser, refresh your page, and search for errors. Faster feedback makes for happier developers (that's you!).
 
-- You can install it globally with `npm -g install eslint`.
-- For Atom you can install the linter package with: `apm install linter linter-eslint`
-- For Sublime Text see https://github.com/roadhump/SublimeLinter-eslint
+## Install linter and linter-eslint Atom packages
 
-## Building This Project Locally
+For this next part, you will have Atom's package manager **apm** install some packages. Go [here](https://atom.io/docs/v0.194.0/using-atom-atom-packages#command-line) to verify it's enabled. Once you have verified that apm commands will work, enter this on your Terminal:
 
-This course project is a [Gitbook](http://gitbook.com). This allows it to be read on Github, published to a web server, or PDF, EPUB and MOBI.
+`apm install linter linter-eslint`
 
-To read and edit the Gitbook on your own machine, after cloning this repo, execute these commands in Terminal:
-```
-npm -g install gitbook-cli
-gitbook serve
-```
+You should get two success messages while it installs the linter and linter-eslint packages.
 
+### Verify the Atom packages installation
+Enter the following into your Terminal:
+
+`apm ls`
+
+ ![](http://i.imgur.com/Jlv6LeP.png)
+
+ You should get a long list and at the end you should get a list of packages you installed for Atom. Linter and linter-eslint should be on that list.
+
+Congrats! You're all done.
