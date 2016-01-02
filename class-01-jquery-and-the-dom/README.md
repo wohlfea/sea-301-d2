@@ -16,7 +16,7 @@ Full instructions for what to do are found in your [first pair assignment](pairs
 
 The majority of your daily programming practice should come from working on your independent assignments. Primarily, you'll be building yourself an online portfolio web site.
 
-Your first independent assignment follows...
+Your first independent assignment can be found in the `portfolio-assignment` subdirectory of every class folder.
 
 ## Helpful Resources for Class 1
  - Watch these videos on Agile Software Development:

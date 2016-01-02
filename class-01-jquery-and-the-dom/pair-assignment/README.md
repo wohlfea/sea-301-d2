@@ -25,7 +25,7 @@ The workflow may take a little getting used to, if you haven't done pairing befo
 Here is a recommended workflow:
 
 1. Driver: fork this repository to your own account. This original repo (the one at `github.com/codefellows`) is the "upstream" repo.
-1. Your fork on GitHub will be your "origin" repo. Clone YOUR FORK to your local development environment.
+1. Your **forked repo** on GitHub will be your "origin" repo. Clone YOUR FORK to your local development environment.
 1. Use this command, so that your local repo knows about the upstream repo:
   - `git remote add upstream git-url-here`
   - (replace `git-url-here` with the proper git-URL of the upstream repo).
@@ -39,7 +39,7 @@ Now find those `TODO` items in the code, and tackle one of them.
 1. Driver: In your terminal, change directory into the `pair-assignemnt` folder.
 1. Copy the starter code folder to a new folder named for your pair:
  - `cp starter-code/ sabrina-chris/`
-1. Now cd into that new folder.
+1. Now cd into that new folder. This is where you will write code.
 1. Type `atom .` to open the new folder as a project in Atom.
 1. Use the Atom "Find in Project" feature to locate all the TODO items.
 1. Work through one or two TODO items, testing your code as you go, until you are happy with how it's working.
