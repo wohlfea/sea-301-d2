@@ -1,6 +1,9 @@
+var articles = [];
+
 function Article (opts) {
   // TODO: Use the js object passed in to complete this contructor function:
-  // Save the properties of `opts` into `this`.
+  // Save ALL the properties of `opts` into `this`.
+  this.author = opts.author;
 }
 
 Article.prototype.toHtml = function() {
@@ -21,21 +24,19 @@ Article.prototype.toHtml = function() {
 
   $newArticle.append('<hr>');
 
-  // TODO: This cloned article is no longer a template, so we should remove that class
+  // TODO: This cloned article is no longer a template, so we should remove that class...
 
   return $newArticle;
 }
 
-blog.rawData.sort(function(a,b) {
-  return a.publishedOn < b.publishedOn;
+rawData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-blog.rawData.forEach(function(ele) {
-  blog.articles.push(new Article(ele));
+rawData.forEach(function(ele) {
+  articles.push(new Article(ele));
 })
 
-// TODO: Now that blog.articles has all our article objects,
-// we need to stick them into the DOM. We can convert each one to html
-// with the .toHTML function we defined on the prototype, but what
-// do we do with that HTML? How do we do it for every individual
-// article?
+articles.forEach(function(a){
+  $('#articles').append(a.toHtml())
+});
