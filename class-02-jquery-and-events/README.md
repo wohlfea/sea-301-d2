@@ -1,27 +1,10 @@
 # Assignment for Class 2 - jQuery and Events
 
-Today we will work on adding single-page tabs to the blog.  We will also add the ability to select articles by category or author name as a way to filter the view
+Today we will work on adding a very common feature of web pages: single-page tabs.
 
-We will use jQuery events to make this happen.
+We will also give our blog readers the ability to select articles by category (or maybe even author name) as a way to filter the view.
 
-## User Stories
-  1. As a reader, I want articles truncated to the first paragraph so that I can easily scroll though the whole list.
-  - As a reader, I want to click the "Read On" button so that I can see the entire article.
-  - As an author, I want my articles filtered by name so that readers can find all my posts.
-  - As a reader, I want articles filterable by category so that I can read things that interest me.
-  - As the creator, I want the About nav to act as a tab, so my story is revealed FAST.
-  - As a reader, I want the blog to use a little color, so that I can distinguish it from other pages.
-
-## Technical Requirements and Grading Rubric
-  - Use event delegation whenever appropriate.
-  - Make sure you aren't showing articles that are unpublished ("draft").
-  - Add your filters to the Nav section.
-  - Factor out any helper functions to a `Util` object, perhaps in a util.js file.
-  - Do as much work as you can with advanced selectors, rather than littering your markup with classes and ids.
-  - When classes and IDs are needed, pick semantic names. There is to be no `$('#content .content')` nonsense!
-  - When one filter is selected, it should reset the other filter (eg: it should not AND them).
-  - Add color and icons where appropriate.
-  - Your blog should end up looking [something like this](http://hijk.it/image/1C3V1S1r3H1n/Screen%20Shot%202015-11-23%20at%2012.21.45%20PM.png).
+We will use jQuery's event handling APIs to make this happen, rather than the vanilla JS methods.
 
 ## Helpful Resources
  - jQuery Cheat sheet: http://oscarotero.com/jquery/
