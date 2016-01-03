@@ -2,7 +2,7 @@
 
 Work with the provided starter code to add event handling to a basic Blog web site.
 
-The code has  unfinished features. Your help is needed to complete it!
+The code has unfinished features. Your help is needed to complete it!
 
 Search through the code for:
 
