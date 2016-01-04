@@ -1,6 +1,6 @@
-# jQuery Events in the View
+# Responsive Web Apps & SMACSS
 
-Work with the provided starter code to make a basic Blog web site mobile-first responsive.
+Work with the provided starter code to make the Blog web app mobile-first responsive.
 
 The code has unfinished features. Your help is needed to complete it!
 
