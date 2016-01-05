@@ -2,7 +2,7 @@
 
 Work with the provided starter code to add event handling to a basic Blog web site.
 
-The code has unfinished features. Your help is needed to complete it!
+The code has unfinished features. Your help is needed to complete it! The blog should end up looking [something like this](http://hijk.it/image/1C3V1S1r3H1n/Screen%20Shot%202015-11-23%20at%2012.21.45%20PM.png).
 
 Search through the code for:
 
@@ -44,7 +44,7 @@ Now duplicate the starter code, find those `TODO` items in the source code, and 
  - `cp starter-code/ natalie-patrick/`
 1. Now cd into that new folder. This is where you will write code.
 1. Type `atom .` to open the new folder (your current directory) as a project in Atom.
-1. Take some time to read through the code. There is lots there, and it's dense. Do some code review together. 
+1. Take some time to read through the code. There is lots there, and it's dense. Do some code review together.
 1. Use the Atom "Find in Project" feature to locate all the TODO items.
 1. Work through one or two TODO items, testing your code as you go, until you are happy with how it's working.
 
