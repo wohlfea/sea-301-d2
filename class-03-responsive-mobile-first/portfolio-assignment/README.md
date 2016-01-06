@@ -2,6 +2,8 @@
 
 Follow along with these user stories to make sure your portfolio looks good on any sized device.
 
+Adapt these stories as necessary to fit how you want to build your portfolio.
+
 ## User Stories: MVP
   1. As a visitor, I want the images to be responsive, so that content stays properly proportioned.
   1. As a visitor, I want the viewport properly sized, so that content fits all the size I have available.
