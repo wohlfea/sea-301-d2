@@ -34,3 +34,7 @@ a:hover, a:focus {
 
 a:visited {
 }
+
+ul{
+  list-style-type: none;
+}
