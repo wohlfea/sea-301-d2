@@ -1,8 +1,14 @@
 # Templates
 
 Fix up the blog codebase, so it's properly using Handlebars templates.
+<<<<<<< HEAD
 1. In your HTML file, include handlebars.js (use a CDN or download the file) and create a template that uses Handlebars syntax.
 1. Modify your Javascript code to use Handlebars' .compile() method, which returns a function; use that function to generate new articles and attach those articles to your DOM.
+=======
+
+1. _In your HTML file, include handlebars.js (use a CDN or download the file) and create a template that uses Handlebars syntax._
+1. _Modify your Javascript code to use Handlebars' .compile() method, which returns a function; use that function to generate new articles and attach those articles to your DOM._
+>>>>>>> bdaf39a0d3e07c43a2499ebdce9cf2af049114ad
 
 You should be familiar with the pair flow by now. If not, review previous instructions.
 
