@@ -45,7 +45,11 @@ If you haven't already, install [Atom](https://atom.io). If you have used an adv
 
   To install Node, open your Terminal, and enter:
 
-  `apt-get install nodejs`
+  `curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -`
+
+  It will churn away for a while, and then once it's done you can run:
+
+  `sudo apt-get install nodejs`
 
 #### Mac instructions
 
