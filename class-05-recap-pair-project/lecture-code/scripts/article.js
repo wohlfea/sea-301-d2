@@ -12,6 +12,12 @@ function Article (opts) {
 
 // convert article object's properties to an "HTML snippet"
 Article.prototype.toHtml = function() {
+  var handleFunc = Handlebars.compile($('#article-template').text());
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  console.log(this.body);
+  this.body = marked(this.body)
+  return (handleFunc(this));
     /* Call Handlebars
        Compute date
        Convert markdown to HTML
