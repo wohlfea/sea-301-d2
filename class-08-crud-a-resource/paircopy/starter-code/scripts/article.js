@@ -19,10 +19,10 @@
     return template(this);
   };
 
-  // TODO: Set up a DB table for articles.
+  // DONE: Set up a DB table for articles.
   Article.createTable = function(callback) {
     webDB.execute(
-      '...',
+      'CREATE TABLE IF NOT EXISTS articles (title TEXT, category TEXT, author TEXT, authorURL TEXT, publishedOn TEXT, body TEXT);',
       function(result) {
         console.log('Successfully set up the articles table.', result);
         if (callback) callback();
@@ -33,22 +33,22 @@
   // TODO: Correct the SQL to delete all records from the articles table.
   Article.truncateTable = function(callback) {
     webDB.execute(
-      'DELETE ...;',
-      callback
+      'DELETE FROM articles;',
+      if (callback) callback();
     );
   };
 
 
-  // TODO: Insert an article instance into the database:
+  // DONE: Insert an article instance into the database:
   Article.prototype.insertRecord = function(callback) {
     webDB.execute(
       [
         {
-          'sql': '...;',
-          'data': [],
+          'sql': 'INSERT INTO articles (title, category, author, authorURL, publishedOn, body) VALUES (?, ?, ?, ?, ?, ?);',
+          'data': [this.title, this.category, this.author, this.authorURL, this.publishedOn, this.body]
         }
       ],
-      callback
+      if (callback) callback()
     );
   };
 
