@@ -1,6 +1,6 @@
 # SQL and Resource CRUD
 
-The starter code is all set for you and a pair to dive it, and get it working!
+The starter code is all set for you and a pair to dive it, and get it working! Open up the [production deployment](https://cf-mvc-blog--class08.aerobatic.io/) of the working version, and play around in the console.
 
 ## User Stories: MVP
  - As a developer, I want article data to persist with SQL, so that I can store more, faster and have more query flexibility.
@@ -11,7 +11,7 @@ Crucially, you'll need to trace through the app logic, and all those callback fu
 
 Look through the TODOs, which signify areas of the code with varying levels of completeness, and focus initially on writing correct SQL. Practice in the web inspector.
 
-Since there is no portfolio assignment, see if you can reach any stretch goals. 
+Since there is no portfolio assignment, see if you can reach any stretch goals.
 
 ## User Stories: Stretch Goals
  - As a developer, I want a more flexible editor page (editor/articles.html) that can add, update, or delete entries.
