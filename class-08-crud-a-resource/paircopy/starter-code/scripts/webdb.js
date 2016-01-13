@@ -35,7 +35,7 @@
 
   // Public interface method to run some SQL and pass the result to a callback function:
   webDB.execute = function (sql, callback) {
-    callback = callback || function() {};
+    callback = callback || function() { console.log('it worked')};
     html5sql.process(
       sql,
       function (tx, result, resultArray) {
