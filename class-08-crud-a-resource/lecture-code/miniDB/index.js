@@ -13,13 +13,7 @@ function runDemo(my) {
   var articlesURL = 'articles.json';
   var fragmentName = '';
 
-  my.runSQLcmd = function(cmd) {
-    webDB.execute(cmd,
-                  function(response) { mylog('<hr>'+cmd+"<br>"+JSON.stringify(response)); }
-                 );
-  }
-
-  // Render. Data must exist at this point!
+  // Render articles. Data must exist at this point!
   my.showArticles = function(A) {
     var articles = A;
     console.log("Async: Near top of showArticles(): articles="+articles);
@@ -33,28 +27,22 @@ function runDemo(my) {
     });
   }
 
+  // Init SQL database. Wipe it clean; this is a demo and not Lab #8
+  webDB.init();
+  model.setupTable();
+
+  // This is what the blog app would do on a localStorage cache miss
+  // Get external data
   my.processJSON = function(data) {
-    webDB.insertAllRecords(data);
-    console.log("Async: Just after insertAllRecords() call.");
-    // getAllArticles() is sequential and accepts a callback, so we can do this:
+    data.forEach(webDB.insertRecord);
     webDB.getAllArticles(my.showArticles);
   }
-
-  // Init SQL database. Wipe it clean since this is a demo and not Lab #8
-  webDB.init();
-  my.runSQLcmd('DROP TABLE articles');
-  webDB.setupTables();
-
-  // Get external data
-  // Do what the blog app would do on a localStorage cache miss
   $.getJSON(articlesURL, my.processJSON);
 
-  // Runs SQL command if at least one semicolon is inside the text area
   my.checksemi = function() {
     var cv = $cmd.val();
-    if (cv.match(/.+;/)) {
-      my.runSQLcmd(cv);
-    }
+    // Run SQL cmd if at least one semicolon is in the text area
+    if (cv.match(/.+;/)) { webDB.runSQLcmd(cv); }
   }
 
   $rmLog.on('click', clearLog);
