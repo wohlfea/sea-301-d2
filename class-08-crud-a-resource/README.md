@@ -20,5 +20,5 @@ Databases power web applications everywhere by enabling them to persist, modify,
 ## Useful resources.
  - [SQLBolt](http://sqlbolt.com/) -- Interactive SQL Tutorial
  - [WebSQL introduction and example](http://html5doctor.com/introducing-web-sql-databases/)
- - [html5sql library](http://html5sql.com/) -- Consider including this library in your project to facilitate working with WebSQL
+ - [html5sql library](http://html5sql.com/) -- This is what powers the `webDB` object. Peek under the hood!
  - [Query String Primer](https://en.wikipedia.org/wiki/Query_string)
