@@ -22,7 +22,7 @@
   // DONE: Set up a DB table for articles.
   Article.createTable = function(callback) {
     webDB.execute(
-      'CREATE TABLE IF NOT EXISTS articles (title TEXT, category TEXT, author TEXT, authorURL TEXT, publishedOn TEXT, body TEXT);',
+      'CREATE TABLE IF NOT EXISTS articles (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, category TEXT, author TEXT, authorURL TEXT, publishedOn TEXT, body TEXT);',
       function(result) {
         console.log('Successfully set up the articles table.', result);
         if (callback) callback();
@@ -57,8 +57,8 @@
     webDB.execute(
       [
         {
-          'sql': 'DELETE FROM articles WHERE body = (?) title = (?) publishedOn = (?);',
-          'data': [this.body, this.title, this.publishedOn]
+          'sql': 'DELETE FROM articles WHERE id = "'+ this.id +'";',
+          // 'data': [this.body, this.title, this.publishedOn]
         }
       ],
       callback
@@ -69,7 +69,10 @@
   Article.prototype.updateRecord = function(callback) {
     webDB.execute(
       [
-        /* ... */
+        {
+          'sql': 'UPDATE articles SET title = ?, category = ?, author = ?, authorURL = ?, publishedOn = ?, body = ? WHERE id = "'+ this.id +'";',
+          'data': [this.title, this.category, this.author, this.authorURL, this.publishedOn, this.body],
+        }
       ],
       callback
     );
