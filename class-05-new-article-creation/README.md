@@ -44,3 +44,6 @@ This will all happen on a special html page, not linked from the main page.
  - [Part 2 of 4](https://youtu.be/cGstJPfC0Cc)
  - [Part 3 of 4](https://youtu.be/t5dRIu80Uq4)
  - [Part 4 of 4](https://youtu.be/5fyE9MEM4v8)
+ - [Selena Lightening Talk] (https://youtu.be/L7o1isK6-Rk)
+ - [Table Tennis & Geometry] (https://youtu.be/WNkK8wXP0aU)
+ - [Jared & Paul Lightening Talk] (https://youtu.be/z4E2qBGIhyg)
