@@ -12,8 +12,8 @@ page('*', notFound);
 
 page();
 
-function index()   { mylog1('MAIN INDEX PAGE.<br>Article 1<br>Article 2'); }
-function about()   { mylog1('About Me:<br>I\'m a coder!'); }
+function index() { mylog1('MAIN INDEX PAGE.<br>Article 1<br>Article 2'); }
+function about() { mylog1('About Me:<br>I\'m a coder!'); }
 
 function contact(ctx) {
   mylog1('Contact me at supercoder@supercoder.com<br>' +
