@@ -2,11 +2,13 @@
 
 At the heart of every web app is the Web Request-Response Cycle. Pay close attention to how your app is creating and responding to requests. With client-side routing and the History API, we can add a layer of abstraction on top of the traditional routing.
 
-**Ensure you run the blog with `node server.js`, not the `live-server` command.**
+**Ensure you run the blog with `node server.js` from the `starter-code` directory, not the `live-server` command.**
 
 The URLs that your app can respond to maps to your apps capabilities. Consider what public routes your app should have. Use page.js to expose those as navigable URLs. Then setup controllers to handle those URLs, all on the client side.
 
 We are now building a true Single-Page App, so clicking links within the app should no longer start a whole new request to the web server. Work through these user stories to convert the blog to SPA-style.
+
+See a [working deployed version](https://cf-mvc-blog--class11.aerobatic.io/) of the app as a target reference.
 
 ## User Stories: MVP
  1. As a developer, I want an articleController, so that I can group together actions related to the article resource.
