@@ -10,7 +10,7 @@
     // Write a success function to do something
     var qs = '?per_page=100&sort=updated';
     $.ajax({
-      url: 'https://api.github.com/users/wohlfea/repos' + qs,
+      url: 'https://api.github.com/users/rdsannicolas/repos' + qs,
       type: 'GET',
       headers: {'Authorization': 'token ' + githubToken},
       success: function(data, message, xhr){

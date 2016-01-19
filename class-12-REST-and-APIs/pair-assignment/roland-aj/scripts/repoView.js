@@ -9,10 +9,10 @@
     $about.show().siblings().hide();
   };
 
-  // TODO: How do you want to render a single repo as html? Return your filled in HTML template.
+  // DONE: How do you want to render a single repo as html? Return your filled in HTML template.
   repoView.render = function(repo) {
     $.each(repos.all, function(i){
-      $('body').prepend('<h2>' + repos.all[i].name + '</h2>')
+      $('#mygithub').append('<li><a href="'+ repos.all[i].html_url + '">' + repos.all[i].name + '</a></li>')
     })
   };
 
