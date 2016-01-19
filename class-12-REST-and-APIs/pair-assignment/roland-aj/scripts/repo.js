@@ -4,13 +4,18 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    // TODO: How would you like to fetch your repos? Don't forget to call the callback.
+    // DONE: How would you like to fetch your repos? Don't forget to call the callback.
 
     // Fetch repo's with ajax - 1st requirement
     // Write a success function to do something
     var qs = '?per_page=100&sort=updated';
-    $.get('/github/users/bnates/repos' + qs).done(function(data, msg, xhr){
-      repos.all = data;
+    $.ajax({
+      url: 'https://api.github.com/users/rdsannicolas/repos' + qs,
+      type: 'GET',
+      headers: {'Authorization': 'token ' + githubToken},
+      success: function(data, message, xhr){
+        repos.all = data;
+      }
     }).done(callback)
   };
 
