@@ -21,6 +21,7 @@
   articlesController.loadByAuthor = function(ctx, next) {
     var authorData = function(articlesByAuthor) {
       ctx.articles = articlesByAuthor;
+      console.log(ctx.articles);
       next();
     };
 
